@@ -1,8 +1,14 @@
+import os
+
+from datetime import datetime as dt
+from dotenv import find_dotenv, load_dotenv
+
 import telebot
 from telebot import types
-from datetime import datetime as dt
 
-TOKEN = '6774806865:AAEL2OfJPBVOwFtXQ6GHvb071-u-x5gYfoc'
+# Create file '.env' with your TOKEN=TOKEN
+load_dotenv(find_dotenv())
+TOKEN = os.getenv('TOKEN')
 
 BALL_PRICE = 400
 GUN_PRICE = 500
